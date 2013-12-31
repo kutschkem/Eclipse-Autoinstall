@@ -1,7 +1,9 @@
 source EclipsePath.sh
 
+ECLIPSEC=`bash findEclipsec.sh`
+
 function installPlugin {
-$EC_PATH/eclipsec.exe -application org.eclipse.equinox.p2.director \
+$ECLIPSEC -application org.eclipse.equinox.p2.director \
 -repository $2 \
 -installIU $1 \
 -tag $1 \
